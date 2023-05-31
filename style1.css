@@ -476,6 +476,33 @@ footer p {
 
 }
 
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.column2 {
+  width: 30%;
+  padding: 10px;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -524,4 +551,3 @@ footer p {
 .card button:hover {
   background-color: #555;
 }
-
