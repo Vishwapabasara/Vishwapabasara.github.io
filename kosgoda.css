@@ -118,4 +118,105 @@ body, h1, h2, h3, p, ul, li {
     padding: 10px;
     text-align: center;
   }
-  
+  @media screen and (max-width: 600px) {
+    .banner {
+      background-size: 100%;
+    }
+    
+    .nav {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .nav a {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+    
+    .t {
+      display: none;
+    }
+    
+    #img1 {
+      height: 80px;
+      width: 80px;
+    }
+    
+    .y {
+      font-size: 60px;
+    }
+    
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .item {
+      padding: 10px;
+    }
+    
+    #title {
+      font-size: 30px;
+    }
+    
+    .grid-container_kosgoda {
+      grid-template-columns: 1fr;
+    }
+    
+    .Useful {
+      position: static;
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .banner {
+      background-size: 100%;
+    }
+    
+    .nav {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .nav a {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+    
+    .t {
+      display: none;
+    }
+    
+    #img1 {
+      height: 80px;
+      width: 80px;
+    }
+    
+    .y {
+      font-size: 60px;
+    }
+    
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .item {
+      padding: 10px;
+    }
+    
+    #title {
+      font-size: 30px;
+    }
+    
+    .grid-container_kosgoda {
+      grid-template-columns: 1fr;
+    }
+    
+    .Useful {
+      position: static;
+      margin-top: 20px;
+    }
+  }
