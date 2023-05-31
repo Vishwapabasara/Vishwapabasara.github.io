@@ -552,6 +552,7 @@ footer p {
   background-color: #555;
 }
 #pimg{
-  max-width: 100%;
-  height: auto;
+  height: 80px;
+  width: 60px;
 }
+
