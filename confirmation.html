@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    .confirmation-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .confirmation-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .confirmation-details {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .confirmation-details label {
+      font-weight: bold;
+    }
+
+    .confirmation-total {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .confirmation-message {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:first-child {
+    font-weight: bold;
+    background-color: #f7f7f7;
+}
+@media screen and (max-width: 600px) {
+      .confirmation-container {
+        padding: 10px;
+      }
+
+      .confirmation-heading {
+        font-size: 20px;
+      }
+
+      .confirmation-details label,
+      .confirmation-details span,
+      .confirmation-total label,
+      .confirmation-total span {
+        font-size: 14px;
+      }
+
+      .confirmation-message {
+        font-size: 16px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="confirmation-container">
+    <h2 class="confirmation-heading">Thank You For Your Purchase!</h2>
+    <div class="confirmation-details">
+      <label>Reservation Date:</label> <span id="summarydate"></span>
+      <br>
+      <label>Time Slot:</label>  <span id="summary-time-slot"></span>
+      <br>
+      <label>Card Holder Name:</label>  <span id="summary-card-holder"></span>
+      <br>
+    </div>
+    <div class="confirmation-total">
+      <label>Total Payable:</label> <span id="total"></span>
+    </div>
+    <div class="confirmation-message">
+      Your purchase has been successfully completed. Thank you for choosing our service!
+    </div>
+    <table>
+      <tr>
+        <td>Category</td>
+        <td>Quantity</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td>Foreigner Adult</td>
+        <td id="summaryForeignerAdult"></td>
+        <td id="priceForeignerAdult">$</td>
+      </tr>
+      <tr>
+        <td>Foreigner Child</td>
+        <td id="summaryForeignerChild"></td>
+        <td id="priceForeignerChild">$</td>
+      </tr>
+      <tr>
+        <td>SL Adult</td>
+        <td id="summarySLAdult"></td>
+        <td id="priceSLAdult">$</td>
+      </tr>
+      <tr>
+        <td>SL Child</td>
+        <td id="summarySLChild"></td>
+        <td id="priceSLChild">$</td>
+      </tr>
+      <tr>
+        <td colspan="1">Infant</td>
+        <td>(Free)</td>
+      </tr>
+      <tr>
+        <td>Date </td>
+        <td id="date"></td>
+      </tr>
+      <tr>
+        <td>Total Payable</td>
+        <td id ="seetotal"></td>
+      </tr>
+    </table>
+  </div>
+  <script>
+   
+    //
+    document.addEventListener('DOMContentLoaded', function () {
+            const ticketData = localStorage.getItem('ticketData');
+            const reservationDate = localStorage.getItem('reservationDate');
+            const timeSlot = localStorage.getItem('timeSlot');
+            let totalPayable = localStorage.getItem('totalPayable');
+            
+         const date=document.getElementById('date');
+          date.innerHTML=reservationDate;
+          const summarydate=document.getElementById('summarydate');
+          summarydate.innerHTML=reservationDate;
+            //
+            const summaryTimeSlot = document.getElementById('summary-time-slot');
+            summaryTimeSlot.innerHTML = timeSlot;
+          
+
+           const seetotal=document.getElementById('seetotal');
+           seetotal.innerHTML=totalPayable;
+
+           const slAdult = localStorage.getItem('AdultTickets');
+           console.log(slAdult);
+           
+        });
+
+        const slAdultTickets = localStorage.getItem('slAdultTickets');
+        document.getElementById('summarySLAdult').textContent = slAdultTickets;
+        const slAdultTotal = localStorage.getItem('slAdultTotal');
+        document.getElementById('priceSLAdult').textContent =slAdultTotal;
+        // 
+        const slChildTickets= localStorage.getItem('slChildTickets');
+        document.getElementById('summarySLChild').textContent = slChildTickets;
+        const slChildTotal = localStorage.getItem('slChildTotal');
+        document.getElementById('priceSLChild').textContent =slChildTotal;
+        //
+        const foreignerAdultTickets = localStorage.getItem('foreignerAdultTickets');
+        document.getElementById('summaryForeignerAdult').textContent =foreignerAdultTickets;
+        const foreignerAdultTotal = localStorage.getItem('foreignerAdultTotal');
+        document.getElementById('priceForeignerAdult').textContent =foreignerAdultTotal;
+        //
+        const foreignerChildTickets= localStorage.getItem('foreignerChildTickets');
+        document.getElementById('summaryForeignerChild').textContent =foreignerChildTickets;
+        const foreignerChildTotal = localStorage.getItem('foreignerChildTotal');
+        document.getElementById('priceForeignerChild').textContent =foreignerChildTotal;
+        //
+         
+  </script>
+</body>
+</html>

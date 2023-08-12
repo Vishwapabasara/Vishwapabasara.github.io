@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+  
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8dede;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:url("/Users/vishwapabasara/Downloads/50 Beautiful High-Resolution 4K Desktop Wallpapers.png") ;
+			
+        }
+
+          /* Center the form on larger screens */
+          #registrationForm {
+            width: 400px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            #registrationForm {
+                width: 90%; /* Adjust form width for smaller screens */
+            }
+            /* Align center for summary section */
+            .summaryf {
+                text-align: center;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+       #registrationForm {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            height: 400px;
+            position: relative;
+            right: 150px;
+        }
+        .summaryf {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d70000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+    
+    
+
+
+/* Style the section */
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: relative;
+    left: 420px;
+    bottom: 400px;
+}
+        
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            
+        }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+   .ticket{
+    width: 50px;
+    height: 50vh;
+    color: #ffffff;
+    display: grid;
+   }
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    tr:hover {
+      background-color: #f2f2f2;
+    }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #4722cf;
+            border-radius: 4px;
+        }
+          .rF{
+            position: relative;
+            right: 150px;
+            color: #fff;
+            
+          }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("/Users/vishwapabasara/Downloads/Crossfire PC Wallpaper 1080p.jpg");
+            background-size: 8px;
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 25px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                background-image: none; /* Remove background image on smaller screens */
+                background-color: #e41c1c; /* Set a background color instead */
+            }
+
+            form {
+                max-width: 100%; /* Adjust form width to fit smaller screens */
+            }
+
+            select {
+                background-image: none; /* Remove custom dropdown arrow image on smaller screens */
+            }
+        }
+        #table{
+          position: relative;
+          right: -15px;
+        }
+        #submitBtn{
+          position: relative;
+          left: 250px;
+          bottom: 400px;
+          background-color: #1165ba;
+          color: #000000;
+          position: relative;
+          top: -250px;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          width: 100%;
+        }
+        .input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  top: 30px;
+}
+
+.input-container label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.input-container input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  position: relative;
+  bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+   
+    <form id="registrationForm">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required>
+        </div>
+       
+      </div>
+      <div class="input-container">
+        <label for="phone-number">Phone Number:</label>
+        <br>
+        <input id="phone" type="tel" name="phone" />
+      </div>
+        </div>
+        <form  class="summaryf">
+        <div class="section">
+            <h2 class="subheading">Summary</h2>
+            <table id="table">
+              <tr>
+                <td>Category</td>
+                <td>Quantity</td>
+                <td>Price</td>
+              </tr>
+              <tr>
+                <td>Foreigner Adult</td>
+                <td id="summaryForeignerAdult"></td>
+                <td id="priceForeignerAdult">$</td>
+              </tr>
+              <tr>
+                <td>Foreigner Child</td>
+                <td id="summaryForeignerChild"></td>
+                <td id="priceForeignerChild">$</td>
+              </tr>
+              <tr>
+                <td>SL Adult</td>
+                <td id="summarySLAdult"></td>
+                <td id="priceSLAdult">$</td>
+              </tr>
+              <tr>
+                <td>SL Child</td>
+                <td id="summarySLChild"></td>
+                <td id="priceSLChild">$</td>
+              </tr>
+              <tr>
+                <td colspan="1">Infant</td>
+                <td>(Free)</td>
+              </tr>
+              <tr>
+                <td>Date </td>
+                <td id="date"></td>
+              </tr>
+              <tr>
+                <td>Total Payable</td>
+                <td id ="seetotal"></td>
+              </tr>
+            </table>
+          </div>
+        <div>
+        </form>
+          <a href="payment.html">
+            <button type="button" id="submitBtn">Submit</button>
+        </a>
+        </div>
+        
+    </form>
+    <script> 
+            
+          
+            const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+   document.addEventListener("DOMContentLoaded", function() {
+            const cardNumberInput = document.getElementById("cardNumber");
+            const cvvInput = document.getElementById("cvv");
+
+            // Hide the CVV input initially
+            cvvInput.style.display = "none";
+
+            // Add an event listener to the card number input for input changes
+            cardNumberInput.addEventListener("input", function() {
+                const cardNumber = cardNumberInput.value.replace(/\D/g, '');
+
+                // Check if the card number has a length of 12 digits
+                if (cardNumber.length === 12) {
+                    cvvInput.style.display = "block"; // Show the CVV input
+                } else {
+                    cvvInput.style.display = "none";  // Hide the CVV input
+                }
+            });
+
+            const form = document.getElementById("paymentForm");
+
+// Add an event listener to the form for submission
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form inputs
+    const expirationMonthSelect = document.getElementById("expirationMonth");
+    const expirationDaySelect = document.getElementById("expirationDay");
+    const cardHolderNameInput = document.getElementById("cardHolderName");
+
+    // Create an object to store form input values
+    const paymentData = {
+        cardNumber: cardNumberInput.value,
+        expirationMonth: expirationMonthSelect.value,
+        expirationDay: expirationDaySelect.value,
+        cvv: cvvInput.value,
+        cardHolderName: cardHolderNameInput.value
+    };
+        let form = document.getElementById('registrationForm');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission for now
+
+            // Validate the form inputs
+            if (!fullNameInput.value.trim()) {
+                showError('Full Name is required.');
+                return;
+            }
+
+            if (!mobileNumberInput.value.trim()) {
+                 showError('Mobile Number is required.');
+              return;
+            }
+
+            if (!emailInput.value.trim()) {
+                 showError('Email is required.');
+                return;
+            }
+
+            if (emailInput.value !== confirmEmailInput.value) {
+                showError('Email and Confirm Email do not match.');
+                return;
+            }
+
+                // If gender is not selected, set it to null
+                const gender = genderInput.value || null;
+
+                // Form data is valid, handle form submission or other actions here
+                // For this example, let's just show a success message
+                showSuccess('Registration successful!');
+                });
+
+                localStorage.setItem("cardNumber", paymentData.cardNumber);
+                localStorage.setItem("expirationMonth", paymentData.expirationMonth);
+                localStorage.setItem("expirationDay", paymentData.expirationDay);
+                localStorage.setItem("cvv", paymentData.cvv);
+                localStorage.setItem("cardHolderName", paymentData.cardHolderName);
+
+                // Redirect to confirmation page
+                window.location.href = "file:///Users/vishwapabasara/Desktop/file/turtle/confirmation.html";
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const ticketData = localStorage.getItem('ticketData');
+            const reservationDate = localStorage.getItem('reservationDate');
+            const timeSlot = localStorage.getItem('timeSlot');
+            let totalPayable = localStorage.getItem('totalPayable');
+            
+         const date=document.getElementById('date');
+          date.innerHTML=reservationDate;
+
+          
+
+           const seetotal=document.getElementById('seetotal');
+           seetotal.innerHTML=totalPayable;
+
+           const slAdult = localStorage.getItem('AdultTickets');
+           console.log(slAdult);
+           
+        });
+
+        const slAdultTickets = localStorage.getItem('slAdultTickets');
+        document.getElementById('summarySLAdult').textContent = slAdultTickets;
+        const slAdultTotal = localStorage.getItem('slAdultTotal');
+        document.getElementById('priceSLAdult').textContent =slAdultTotal;
+        // 
+        const slChildTickets= localStorage.getItem('slChildTickets');
+        document.getElementById('summarySLChild').textContent = slChildTickets;
+        const slChildTotal = localStorage.getItem('slChildTotal');
+        document.getElementById('priceSLChild').textContent =slChildTotal;
+        //
+        const foreignerAdultTickets = localStorage.getItem('foreignerAdultTickets');
+        document.getElementById('summaryForeignerAdult').textContent =foreignerAdultTickets;
+        const foreignerAdultTotal = localStorage.getItem('foreignerAdultTotal');
+        document.getElementById('priceForeignerAdult').textContent =foreignerAdultTotal;
+        //
+        const foreignerChildTickets= localStorage.getItem('foreignerChildTickets');
+        document.getElementById('summaryForeignerChild').textContent =foreignerChildTickets;
+        const foreignerChildTotal = localStorage.getItem('foreignerChildTotal');
+        document.getElementById('priceForeignerChild').textContent =foreignerChildTotal;
+        //
+         
+        //
+        
+        
+    </script>
+
+</body>
+</html>
