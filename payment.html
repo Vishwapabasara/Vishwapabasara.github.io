@@ -8,7 +8,7 @@
        body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-image: url("/Users/vishwapabasara/Downloads/Unknown-5.jpg");
+    background-image: url("Unknown-5.jpg");
     background-size: cover; /* Adjust as needed */
     background-repeat: no-repeat;
     background-attachment: fixed; /* This keeps the background fixed while scrolling */
@@ -176,7 +176,7 @@
 
             <label for="cardHolderName" id="cardHolderName">Name on Card:</label>
             <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Cardholder's name" required>
-            <a href="file:///Users/vishwapabasara/Desktop/file/turtle/confirmation.html">
+            <a href="confirmation.html">
             <button type="submit">Pay Now</button></a>
         </form>
     </div>
@@ -226,7 +226,7 @@ form.addEventListener("submit", function(event) {
     localStorage.setItem("paymentData", JSON.stringify(paymentData));
 
 // Redirect to confirmation page
-window.location.href = "file:///Users/vishwapabasara/Desktop/file/turtle/confirmation.html";
+window.location.href = "confirmation.html";
 });
 });
     </script>
