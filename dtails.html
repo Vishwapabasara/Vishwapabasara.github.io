@@ -291,7 +291,24 @@
         
     </form>
     <script> 
-            
+            // Function to save data to local storage
+function saveToLocalStorage() {
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const confirmEmail = document.getElementById('confirmEmail').value;
+    const phone = document.getElementById('phone').value;
+
+    localStorage.setItem('fullName', fullName);
+    localStorage.setItem('email', email);
+    localStorage.setItem('confirmEmail', confirmEmail);
+    localStorage.setItem('phone', phone);
+}
+
+// Call the function when saving is triggered (e.g., button click)
+// Make sure to attach this event to your button element
+// For example: <button id="saveButton">Save</button>
+document.getElementById('submitBtn').addEventListener('click', saveToLocalStorage);
+
           
             const phoneInputField = document.querySelector("#phone");
    const phoneInput = window.intlTelInput(phoneInputField, {
