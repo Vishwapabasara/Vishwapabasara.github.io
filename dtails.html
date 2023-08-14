@@ -22,7 +22,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image:url("50 Beautiful High-Resolution 4K Desktop Wallpapers.png") ;
+            background-image:url("/Users/vishwapabasara/Downloads/50 Beautiful High-Resolution 4K Desktop Wallpapers.png") ;
 			
         }
 
@@ -62,13 +62,10 @@
             right: 150px;
         }
         .summaryf {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #d70000;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    position: relative;
+    bottom: 100px;
+    left: 20px;
 
 
 }
@@ -84,7 +81,9 @@
     border: 1px solid #ccc;
     position: relative;
     left: 420px;
-    bottom: 400px;
+    bottom: 320px;
+
+
 }
         
 
@@ -102,6 +101,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      
     }
    .ticket{
     width: 50px;
@@ -291,7 +291,14 @@
         
     </form>
     <script> 
-            // Function to save data to local storage
+            
+          
+            const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+   // Function to save data to local storage
 function saveToLocalStorage() {
     const fullName = document.getElementById('fullName').value;
     const email = document.getElementById('email').value;
@@ -309,12 +316,6 @@ function saveToLocalStorage() {
 // For example: <button id="saveButton">Save</button>
 document.getElementById('submitBtn').addEventListener('click', saveToLocalStorage);
 
-          
-            const phoneInputField = document.querySelector("#phone");
-   const phoneInput = window.intlTelInput(phoneInputField, {
-     utilsScript:
-       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-   });
    document.addEventListener("DOMContentLoaded", function() {
             const cardNumberInput = document.getElementById("cardNumber");
             const cvvInput = document.getElementById("cvv");
